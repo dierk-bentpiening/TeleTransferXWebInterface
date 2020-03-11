@@ -203,6 +203,7 @@ def searchmusica():
       elif session.get('premium'):
          return render_template('searchmusica.html')
 
+
 @app.route('/abuse')
 def abuse():
    if not session.get('logged_in'):
@@ -1008,6 +1009,7 @@ def musicbyyear(ids):
 
          rows = cur.fetchall();
          return render_template("musiclist.html", rows=rows)
+
 
 @app.route('/playmusic<uri>')
 def playmusic(uri):
